@@ -9,6 +9,21 @@ use Inertia\Inertia;
 
 class BookingController extends Controller
 {
+    public function index()
+    {
+        $bookings = Booking::with('kamar')
+            ->where('user_id', auth()->id())
+            ->latest()
+            ->get();
+
+        return Inertia::render(
+            'booking/index',
+            [
+                'bookings' => $bookings
+            ]
+        );
+    }
+
     public function store(
         Request $request,
         Kamar $kamar
@@ -44,12 +59,6 @@ class BookingController extends Controller
 
         ]);
 
-        return Inertia::render('kamar/show', [
-
-            'kamar' => $kamar,
-
-            'user' => auth()->user(),
-
-        ]);
+        return redirect('/my-booking');
     }
 }

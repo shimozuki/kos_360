@@ -1,10 +1,12 @@
-import { Link } from '@inertiajs/react';
+import { usePage, Link } from '@inertiajs/react';
 
 interface Props {
     children: React.ReactNode;
 }
 
 export default function GuestLayout({ children }: Props) {
+
+    const { auth } = usePage().props as any;
 
     return (
 
@@ -61,21 +63,51 @@ export default function GuestLayout({ children }: Props) {
 
                     <div className="flex items-center gap-3">
 
-                        <Link
-                            href="/login"
-                            className="rounded-xl border border-gray-200 px-5 py-2.5 text-sm font-semibold text-gray-700 transition hover:bg-gray-100"
-                        >
-                            Login
-                        </Link>
+                    {auth.user ? (
 
-                        <Link
-                            href="/register"
-                            className="rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-200 transition hover:bg-blue-700"
-                        >
-                            Register
-                        </Link>
+                        <>
 
-                    </div>
+                            <Link
+                                href="/my-booking"
+                                className="rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:bg-blue-700"
+                            >
+                                My Booking
+                            </Link>
+
+                            <Link
+                                href="/logout"
+                                method="post"
+                                as="button"
+                                className="rounded-xl border border-gray-200 px-5 py-2.5 text-sm font-semibold text-gray-700 transition hover:bg-gray-100"
+                            >
+                                Logout
+                            </Link>
+
+                        </>
+
+                    ) : (
+
+                        <>
+
+                            <Link
+                                href="/login"
+                                className="rounded-xl border border-gray-200 px-5 py-2.5 text-sm font-semibold text-gray-700 transition hover:bg-gray-100"
+                            >
+                                Login
+                            </Link>
+
+                            <Link
+                                href="/register"
+                                className="rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:bg-blue-700"
+                            >
+                                Register
+                            </Link>
+
+                        </>
+
+                    )}
+
+                </div>
 
                 </div>
 

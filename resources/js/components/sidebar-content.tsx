@@ -5,13 +5,10 @@ import {
     ChevronLeft,
     ChevronRight,
     ChevronUp,
-    Layers,
+    ClipboardList,
     List,
     Settings,
-    ShoppingBasket,
-    Store,
     UserCheck,
-    Warehouse,
 } from 'lucide-react';
 import { useState } from 'react';
 import AppLogo from './app-logo';
@@ -127,12 +124,13 @@ export function SidebarContent({
                             isCollapsed={isCollapsed}
                             active={isActive('/kamar')}
                        />
-                        <NavItem
-                            icon={<ShoppingBasket size={20} />}
-                            label="Products"
+                       <NavItem
+                            icon={<ClipboardList size={20} />}
+                            label="Bookingan"
+                            href="/admin/booking"
                             isCollapsed={isCollapsed}
                         />
-                        <NavItem
+                        {/* <NavItem
                             icon={<Layers size={20} />}
                             label="Categories"
                             isCollapsed={isCollapsed}
@@ -146,7 +144,7 @@ export function SidebarContent({
                             icon={<Store size={20} />}
                             label="Merchants"
                             isCollapsed={isCollapsed}
-                        />
+                        /> */}
                     </nav>
                 </div>
 
