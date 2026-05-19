@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Booking;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use Illuminate\Notifications\DatabaseNotification;
 
 class AdminBookingController extends Controller
 {
@@ -16,7 +17,7 @@ class AdminBookingController extends Controller
             'kamar'
         ])
             ->latest()
-            ->get();
+            ->paginate(10);
 
         return Inertia::render(
             'admin/booking/index',
@@ -40,5 +41,43 @@ class AdminBookingController extends Controller
         $booking->save();
 
         return back();
+    }
+
+    public function approve($id)
+    {
+        $booking = Booking::findOrFail($id);
+
+        $booking->status = 'approved';
+
+        $booking->save();
+
+        return redirect()->back();
+    }
+
+    public function reject($id)
+    {
+        $booking = Booking::findOrFail($id);
+
+        $booking->status = 'rejected';
+
+        $booking->save();
+
+        return redirect()->back();
+    }
+
+    public function readNotification($id)
+    {
+        $notification =
+            auth()
+            ->user()
+            ->notifications()
+            ->find($id);
+
+        if ($notification) {
+
+            $notification->markAsRead();
+        }
+
+        return redirect('/admin/booking');
     }
 }

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Booking;
 use App\Models\Kamar;
+use App\Models\User;
+use App\Notifications\BookingNotification;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -14,7 +16,7 @@ class BookingController extends Controller
         $bookings = Booking::with('kamar')
             ->where('user_id', auth()->id())
             ->latest()
-            ->get();
+            ->paginate(6);
 
         return Inertia::render(
             'booking/index',
@@ -40,7 +42,7 @@ class BookingController extends Controller
         ]);
 
 
-        Booking::create([
+        $booking = Booking::create([
 
             'user_id' => auth()->id(),
 
@@ -58,6 +60,15 @@ class BookingController extends Controller
             'status' => 'pending',
 
         ]);
+
+        $admin = User::where(
+            'role',
+            'admin'
+        )->first();
+
+        $admin->notify(
+            new BookingNotification($booking)
+        );
 
         return redirect('/my-booking');
     }

@@ -12,7 +12,7 @@ use App\Http\Controllers\BookingController;
 Route::get('/', [LandingController::class, 'index']);
 Route::get('/detail/{id}', [LandingController::class, 'show']);
 
-Route::middleware(['auth', 'verified'])->group(function () {
+Route::middleware(['auth', 'verified', 'admin'])->group(function () {
     Route::get('dashboard', function () {
         return Inertia::render('dashboard');
     })->name('dashboard');
@@ -27,17 +27,36 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/kamar/{id}/edit', [KamarController::class, 'edit']);
     Route::put('/kamar/{id}', [KamarController::class, 'update']);
 
-    Route::post(
-        '/booking/{kamar}',
-        [BookingController::class, 'store']
-    );
 
     Route::get('/admin/booking', [AdminBookingController::class, 'index']);
+    Route::put(
+        '/admin/booking/{id}/approve',
+        [AdminBookingController::class, 'approve']
+    );
 
-    Route::get(
-        '/my-booking',
-        [BookingController::class, 'index']
+    Route::put(
+        '/admin/booking/{id}/reject',
+        [AdminBookingController::class, 'reject']
+    );
+
+    Route::post(
+        '/notification/{id}/read',
+        [AdminBookingController::class, 'readNotification']
     );
 });
+
+Route::middleware(['auth', 'verified'])->group(
+    function () {
+        Route::get(
+            '/my-booking',
+            [BookingController::class, 'index']
+        );
+
+        Route::post(
+            '/booking/{kamar}',
+            [BookingController::class, 'store']
+        );
+    }
+);
 
 require __DIR__ . '/settings.php';

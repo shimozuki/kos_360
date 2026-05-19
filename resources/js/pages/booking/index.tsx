@@ -1,5 +1,5 @@
 import GuestLayout from '@/layouts/guest-layout';
-import { Head, Link } from '@inertiajs/react';
+import { Head, Link, router } from '@inertiajs/react';
 
 interface Booking {
     id: number;
@@ -15,8 +15,13 @@ interface Booking {
     };
 }
 
+interface PaginatedBookings {
+    data: Booking[];
+    links: any[];
+}
+
 interface Props {
-    bookings: Booking[];
+    bookings: PaginatedBookings;
 }
 
 export default function BookingIndex({
@@ -77,7 +82,7 @@ export default function BookingIndex({
                     {/* LIST BOOKING */}
                     <div className="space-y-8">
 
-                        {bookings.map((booking) => (
+                        {bookings.data.map((booking) => (
 
                             <div
                                 key={booking.id}
@@ -169,6 +174,7 @@ export default function BookingIndex({
                                             </div>
 
                                         </div>
+                                        
 
                                         {/* FOOTER */}
                                         <div className="mt-10 flex flex-col gap-6 border-t border-gray-100 pt-6 lg:flex-row lg:items-end lg:justify-between">
@@ -217,6 +223,49 @@ export default function BookingIndex({
                 </div>
 
             </div>
+
+            {/* Pagination */}
+        <div className="mt-12 flex flex-wrap justify-center gap-3">
+
+            {bookings.links.map((link, index) => (
+
+                <button
+                    key={index}
+                    disabled={!link.url}
+                    onClick={() => {
+
+                        if (link.url) {
+                            router.visit(link.url);
+                        }
+
+                    }}
+                    className={`rounded-2xl px-6 py-3 text-sm font-semibold transition-all duration-300
+
+                        ${
+                            link.active
+                                ? 'bg-blue-600 text-white shadow-xl shadow-blue-200 scale-105'
+
+                                : 'bg-white text-gray-700 shadow-md shadow-gray-200 hover:-translate-y-1 hover:bg-blue-50 hover:text-blue-600 hover:shadow-lg'
+                        }
+
+                        ${
+                            !link.url
+                                ? 'cursor-not-allowed opacity-40'
+                                : ''
+                        }
+                    `}
+                    dangerouslySetInnerHTML={{
+                                                    __html: link.label
+                                                        .replace('&laquo; Previous', 'Previous')
+                                                        .replace('Next &raquo;', 'Next')
+                                                        .replace('pagination.previous', 'Previous')
+                                                        .replace('pagination.next', 'Next'),
+                                                }}
+                />
+
+            ))}
+
+        </div>
 
         </GuestLayout>
 

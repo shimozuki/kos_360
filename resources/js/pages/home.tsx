@@ -282,25 +282,7 @@ export default function Welcome({ kamers }: Props) {
                     </div>
                 </section>
 
-                {/* Footer */}
-                <footer className="border-t border-gray-200 bg-white px-6 py-10 lg:px-8">
-                    <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 md:flex-row">
-                        <div>
-                            <h2 className="text-xl font-black text-gray-900">
-                                Kos360
-                            </h2>
-
-                            <p className="mt-2 text-sm text-gray-500">
-                                Sistem Informasi Pemesanan Kost Berbasis Multimedia
-                                Interaktif.
-                            </p>
-                        </div>
-
-                        <p className="text-sm text-gray-400">
-                            © 2026 Kos360. All rights reserved.
-                        </p>
-                    </div>
-                </footer>
+                
             </div>
         </GuestLayout>
     );

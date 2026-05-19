@@ -78,34 +78,30 @@ export default function Index({
 
                 <div className="overflow-x-auto">
 
-                    <table className="w-full">
+                    <table className="min-w-full border-separate border-spacing-y-3">
 
                         <thead>
 
-                            <tr className="text-left text-gray-500">
+                            <tr className="text-left text-sm text-gray-500">
 
-                                <th className="pb-4">
+                                 <th className="px-4">
                                     Penyewa
                                 </th>
 
-                                <th className="pb-4">
+                                 <th className="px-4">
                                     Kamar
                                 </th>
 
-                                <th className="pb-4">
+                                 <th className="px-4">
                                     Tanggal Masuk
                                 </th>
 
-                                <th className="pb-4">
+                                 <th className="px-4">
                                     Durasi
                                 </th>
 
-                                <th className="pb-4">
+                                 <th className="px-4">
                                     Status
-                                </th>
-
-                                <th className="pb-4">
-                                    Action
                                 </th>
 
                             </tr>
@@ -114,87 +110,95 @@ export default function Index({
 
                         <tbody>
 
-                            {bookings.map(
-                                (booking) => (
+                            {bookings.data.map((booking) => (
 
                                 <tr
                                     key={booking.id}
-                                    className="border-t border-gray-100"
+                                    className="rounded-2xl bg-gray-50"
                                 >
 
-                                    <td className="py-5">
+                                    <td className="rounded-l-2xl px-4 py-4">
                                         {
                                             booking.user
                                                 .name
                                         }
                                     </td>
 
-                                    <td className="py-5">
+                                    <td className="rounded-l-2xl px-4 py-4">
                                         {
                                             booking.kamar
                                                 .nama_kamar
                                         }
                                     </td>
 
-                                    <td className="py-5">
+                                    <td className="rounded-l-2xl px-4 py-4">
                                         {
                                             booking.tanggal_masuk
                                         }
                                     </td>
 
-                                    <td className="py-5">
+                                    <td className="rounded-l-2xl px-4 py-4">
                                         {
                                             booking.durasi
                                         } bulan
                                     </td>
 
-                                    <td className="py-5">
+                                    <td className="rounded-l-2xl px-4 py-4">
 
-                                        <span className="rounded-full bg-yellow-100 px-4 py-2 text-sm font-semibold text-yellow-700">
+                                    <span
+                                        className={`rounded-full px-4 py-2 text-sm font-semibold capitalize
 
-                                            {
-                                                booking.status
-                                            }
+                                        ${
+                                            booking.status === 'approved'
+                                                ? 'bg-green-100 text-green-700'
 
-                                        </span>
+                                            : booking.status === 'rejected'
+                                                ? 'bg-red-100 text-red-700'
 
-                                    </td>
+                                            : 'bg-yellow-100 text-yellow-700'
+                                        }
+                                    `}
+                                    >
 
-                                    <td className="py-5">
+                                        {booking.status}
 
-                                        <div className="flex gap-3">
+                                    </span>
+
+                                </td>
+
+                                    <td className="rounded-l-2xl px-4 py-4">
+
+                                    {booking.status === 'pending' && (
+
+                                        <div className="flex gap-2">
 
                                             <button
                                                 onClick={() =>
-                                                    updateStatus(
-                                                        booking.id,
-                                                        'approved'
+                                                    router.put(
+                                                        `/admin/booking/${booking.id}/approve`
                                                     )
                                                 }
-                                                className="rounded-xl bg-green-500 px-4 py-2 text-sm font-semibold text-white"
+                                                className="rounded-xl bg-green-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-green-700"
                                             >
-
                                                 Approve
-
                                             </button>
 
                                             <button
                                                 onClick={() =>
-                                                    updateStatus(
-                                                        booking.id,
-                                                        'rejected'
+                                                    router.put(
+                                                        `/admin/booking/${booking.id}/reject`
                                                     )
                                                 }
-                                                className="rounded-xl bg-red-500 px-4 py-2 text-sm font-semibold text-white"
+                                                className="rounded-xl bg-red-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-red-700"
                                             >
-
                                                 Reject
-
                                             </button>
 
                                         </div>
 
-                                    </td>
+                                    )}
+
+                                </td>
 
                                 </tr>
 
@@ -205,6 +209,35 @@ export default function Index({
                     </table>
 
                 </div>
+                            <div className="mt-6 flex gap-2">
+
+                {bookings.links.map((link, index) => (
+
+                    <button
+                        key={index}
+                        disabled={!link.url}
+                        onClick={() => {
+                            if (link.url) {
+                                router.visit(link.url);
+                            }
+                        }}
+                        className={`rounded-lg px-4 py-2 text-sm ${
+                            link.active
+                                ? 'bg-blue-600 text-white'
+                                : 'bg-gray-100 text-gray-700'
+                        }`}
+                        dangerouslySetInnerHTML={{
+                                            __html: link.label
+                                                .replace('&laquo; Previous', 'Previous')
+                                                .replace('Next &raquo;', 'Next')
+                                                .replace('pagination.previous', 'Previous')
+                                                .replace('pagination.next', 'Next'),
+                                        }}
+                    />
+
+                ))}
+
+            </div>
 
             </div>
 

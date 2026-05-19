@@ -34,33 +34,44 @@ export default function AuthSimpleLayout({
                             <AppLogo iconOnly />
                         </div>
                         <span className="text-2xl font-bold tracking-tight">
-                            Kedjora
+                            Kos 360
                         </span>
                     </Link>
                 </div>
 
                 {/* Quote / Testimonial */}
                 <div className="relative z-10 max-w-lg">
+
                     <Quote className="mb-6 h-10 w-10 text-white/50" />
+
                     <h2 className="mb-4 text-3xl leading-tight font-bold tracking-tight">
-                        "The perfect platform to manage your business
-                        efficiently and scale without limits."
+
+                        "Temukan kamar kost nyaman dengan fasilitas lengkap dan sistem booking online yang mudah."
+
                     </h2>
+
                     <div className="flex items-center gap-4">
+
                         <img
-                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                            alt="Sarah Chen"
+                            src="https://ui-avatars.com/api/?name=Kos+360&background=ffffff&color=2563eb"
+                            alt="Kos360"
                             className="h-10 w-10 rounded-full border-2 border-white/20 object-cover"
                         />
+
                         <div>
+
                             <p className="font-semibold text-white">
-                                Sarah Chen
+                                Kos360 Management
                             </p>
+
                             <p className="text-sm text-blue-100">
-                                Product Manager at TechFlow
+                                Smart Boarding House Platform
                             </p>
+
                         </div>
+
                     </div>
+
                 </div>
 
                 {/* Footer Links */}

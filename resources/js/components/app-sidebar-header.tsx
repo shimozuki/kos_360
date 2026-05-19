@@ -8,8 +8,9 @@ import {
 import { useInitials } from '@/hooks/use-initials';
 import { logout } from '@/routes';
 import { type SharedData } from '@/types';
-import { router, usePage } from '@inertiajs/react';
+import { router, usePage, Link } from '@inertiajs/react';
 import { Bell, LogOut, Menu, Search, User } from 'lucide-react';
+import { useState } from 'react';
 
 export function AppSidebarHeader() {
     const { auth } = usePage<SharedData>().props;
@@ -19,6 +20,9 @@ export function AppSidebarHeader() {
         router.flushAll();
         router.post(logout().url);
     };
+
+    const { notifications } = usePage().props as any;
+    const [openNotif, setOpenNotif] = useState(false);
 
     return (
         <header className="mb-8 flex flex-col items-center gap-4 md:flex-row">
@@ -56,11 +60,95 @@ export function AppSidebarHeader() {
                         <Search size={20} />
                     </button>
 
+                   <div className="relative">
+
                     {/* Notification Button */}
-                    <button className="relative flex h-11 w-11 items-center justify-center rounded-full bg-[#F4F6F9] text-gray-500 transition-all hover:text-gray-900 hover:shadow-md">
+                    <button
+                        onClick={() =>
+                            setOpenNotif(!openNotif)
+                        }
+                        className="relative flex h-11 w-11 items-center justify-center rounded-full bg-[#F4F6F9] text-gray-500 transition-all hover:text-gray-900 hover:shadow-md"
+                    >
+
                         <Bell size={20} />
-                        <span className="absolute top-3 right-3 h-2 w-2 rounded-full border border-white bg-red-500"></span>
+
+                        {notifications.length > 0 && (
+
+                            <span className="absolute top-2 right-2 flex h-5 w-5 items-center justify-center rounded-full border-2 border-white bg-red-500 text-[10px] font-bold text-white shadow-md">
+
+                                {notifications.length}
+
+                            </span>
+
+                        )}
+
                     </button>
+
+                    {/* Dropdown */}
+                    {openNotif && (
+
+                        <div className="absolute right-0 mt-3 w-80 overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-2xl">
+
+                            <div className="border-b border-gray-100 p-5">
+
+                                <h3 className="text-lg font-bold text-gray-900">
+                                    Notifications
+                                </h3>
+
+                            </div>
+
+                            <div className="max-h-96 overflow-y-auto">
+
+                                {notifications.length > 0 ? (
+
+                                    notifications.map((notif: any) => (
+
+                                       <button
+                                        key={notif.id}
+                                        onClick={() => {
+
+                                            router.post(
+                                                `/notification/${notif.id}/read`,
+                                                {},
+                                                {
+                                                    preserveScroll: true,
+                                                    onSuccess: () => {
+                                                        window.location.reload();
+                                                    },
+                                                }
+                                            );
+
+                                        }}
+                                        className="block w-full border-b border-gray-100 p-4 text-left transition hover:bg-gray-50"
+                                    >
+
+                                        <p className="text-sm font-semibold text-gray-800">
+
+                                            {notif.data.message}
+
+                                        </p>
+
+                                    </button>
+
+                                    ))
+
+                                ) : (
+
+                                    <div className="p-6 text-center text-sm text-gray-500">
+
+                                        Tidak ada notifikasi
+
+                                    </div>
+
+                                )}
+
+                            </div>
+
+                        </div>
+
+                    )}
+
+                </div>
                 </div>
             </div>
 
