@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminBookingController;
+use App\Http\Controllers\Admin\AdminDashboard;
+use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Laravel\Fortify\Features;
@@ -13,9 +15,10 @@ Route::get('/', [LandingController::class, 'index']);
 Route::get('/detail/{id}', [LandingController::class, 'show']);
 
 Route::middleware(['auth', 'verified', 'admin'])->group(function () {
-    Route::get('dashboard', function () {
-        return Inertia::render('dashboard');
-    })->name('dashboard');
+    Route::get(
+        'dashboard',
+        [AdminDashboard::class, 'index']
+    )->name('dashboard');
 
     Route::get('/user', [UserController::class, 'index']);
     Route::delete('/user/{id}', [UserController::class, 'destroy']);
