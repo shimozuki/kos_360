@@ -87,7 +87,7 @@ export default function ShowKamar({ kamar, user }: Props) {
 
     return (
         <GuestLayout>
-            <Head title={kamar.nama_kamar} />
+            <Head title={kamar.kode_kamar} />
 
             <div className="space-y-10">
 
@@ -282,7 +282,8 @@ export default function ShowKamar({ kamar, user }: Props) {
                                 </div>
 
                                 <h1 className="text-4xl font-black tracking-tight text-gray-900">
-                                    {kamar.nama_kamar}
+                                    Kamar {' '}
+                                    {kamar.kode_kamar}
                                 </h1>
 
                                 <p className="mt-4 text-lg leading-relaxed text-gray-500">

@@ -12,6 +12,7 @@ import {
 interface Kamar {
     id: number;
     nama_kamar: string;
+    kode_kamar: string;
     harga: number;
     status: string;
     thumbnail: string;
@@ -135,7 +136,8 @@ export default function Welcome({ kamers }: Props) {
                                         </div>
 
                                         <h3 className="text-2xl font-black text-gray-900">
-                                            {kamar.nama_kamar}
+                                            Kamar{' '}
+                                            {kamar.kode_kamar}
                                         </h3>
 
                                         <p className="mt-3 text-sm leading-relaxed text-gray-500">
