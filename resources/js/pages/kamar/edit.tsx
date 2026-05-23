@@ -134,7 +134,7 @@ export default function Edit({
                     <div>
 
                         <label className="mb-2 block text-sm font-semibold text-gray-700">
-                            Kode Kamar
+                            Nomor Kamar
                         </label>
 
                         <input
@@ -152,7 +152,7 @@ export default function Edit({
                     </div>
 
                     {/* nama kamar */}
-                    <div>
+                    {/* <div>
 
                         <label className="mb-2 block text-sm font-semibold text-gray-700">
                             Nama Kamar
@@ -170,7 +170,7 @@ export default function Edit({
                             className="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none focus:border-blue-500"
                         />
 
-                    </div>
+                    </div> */}
 
                     {/* harga */}
                     <div>

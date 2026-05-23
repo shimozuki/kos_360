@@ -1,6 +1,7 @@
 import AppLayout from '@/layouts/app-layout';
-import { Head, Link, router } from '@inertiajs/react';
+import { Head, Link, router, usePage } from '@inertiajs/react';
 import Swal from 'sweetalert2';
+import { useEffect } from 'react';
 
 interface Kamar {
     id: number;
@@ -26,6 +27,30 @@ interface Props {
 }
 
 export default function KamarIndex({ kamers }: Props) {
+
+    const { flash } = usePage().props as any;
+
+    useEffect(() => {
+
+    if (flash.success) {
+
+        Swal.fire({
+
+            icon: 'success',
+
+            title: 'Berhasil',
+
+            text: flash.success,
+
+            showConfirmButton: false,
+
+            timer: 2000,
+
+        });
+
+    }
+
+}, [flash]);
 
     const handleDelete = (id: number) => {
 
@@ -97,7 +122,7 @@ export default function KamarIndex({ kamers }: Props) {
 
                                 <th className="px-4">Thumbnail</th>
                                 <th className="px-4">Kode</th>
-                                <th className="px-4">Nama Kamar</th>
+                                {/* <th className="px-4">Nama Kamar</th> */}
                                 <th className="px-4">Harga</th>
                                 <th className="px-4">Status</th>
                                 <th className="px-4">Action</th>
@@ -126,9 +151,9 @@ export default function KamarIndex({ kamers }: Props) {
                                         {kamar.kode_kamar}
                                     </td>
 
-                                    <td className="px-4 py-4">
+                                    {/* <td className="px-4 py-4">
                                         {kamar.nama_kamar}
-                                    </td>
+                                    </td> */}
 
                                     <td className="px-4 py-4">
                                         Rp {kamar.harga.toLocaleString()}

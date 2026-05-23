@@ -50,6 +50,10 @@ class HandleInertiaRequests extends Middleware
             'notifications' => auth()->check()
                 ? auth()->user()->unreadNotifications
                 : [],
+            'flash' => [
+                'success' => fn() =>
+                $request->session()->get('success'),
+            ],
         ];
     }
 }

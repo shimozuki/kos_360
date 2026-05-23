@@ -5,7 +5,6 @@ export default function CreateKamar() {
 
     const { data, setData, post, processing, errors} = useForm({
         kode_kamar: '',
-        nama_kamar: '',
         harga: 0,
         deskripsi: '',
         status: 'tersedia',
@@ -58,7 +57,7 @@ export default function CreateKamar() {
                     <div>
 
                         <label className="mb-2 block text-sm font-medium text-gray-700">
-                            Kode Kamar
+                            Nomor Kamar
                         </label>
 
                         <input
@@ -73,7 +72,7 @@ export default function CreateKamar() {
                     </div>
 
                     {/* nama kamar */}
-                    <div>
+                    {/* <div>
 
                         <label className="mb-2 block text-sm font-medium text-gray-700">
                             Nama Kamar
@@ -88,7 +87,7 @@ export default function CreateKamar() {
                             className="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none focus:border-blue-500"
                         />
 
-                    </div>
+                    </div> */}
 
                     {/* harga */}
                     <div>

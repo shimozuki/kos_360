@@ -29,7 +29,6 @@ class KamarController extends Controller
         $request->validate([
 
             'kode_kamar' => 'required',
-            'nama_kamar' => 'required',
             'harga' => 'required',
             'deskripsi' => 'required',
 
@@ -47,7 +46,7 @@ class KamarController extends Controller
         $kamar = Kamar::create([
 
             'kode_kamar' => $request->kode_kamar,
-            'nama_kamar' => $request->nama_kamar,
+            'nama_kamar' => "-",
             'harga' => $request->harga,
             'deskripsi' => $request->deskripsi,
             'status' => $request->status,
@@ -104,7 +103,10 @@ class KamarController extends Controller
             }
         }
 
-        return redirect('/kamar');
+        return redirect('/kamar')->with(
+            'success',
+            'Kamar berhasil ditambahkan'
+        );
     }
 
     public function edit($id)
@@ -142,7 +144,7 @@ class KamarController extends Controller
     */
 
         $kamar->kode_kamar = $request->kode_kamar;
-        $kamar->nama_kamar = $request->nama_kamar;
+        $kamar->nama_kamar = "-";
         $kamar->harga = $request->harga;
         $kamar->deskripsi = $request->deskripsi;
         $kamar->status = $request->status;
@@ -208,7 +210,10 @@ class KamarController extends Controller
             }
         }
 
-        return redirect('/kamar');
+        return redirect('/kamar')->with(
+            'success',
+            'Kamar berhasil diupdate'
+        );
     }
 
     public function destroy($id)
