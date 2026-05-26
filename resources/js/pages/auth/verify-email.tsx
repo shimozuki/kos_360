@@ -18,8 +18,8 @@ export default function VerifyEmail({ status }: { status?: string }) {
 
             <div className="flex flex-col items-center">
                 {/* Email Icon */}
-                <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mb-6">
-                    <Mail className="w-8 h-8 text-blue-600" />
+                <div className="w-16 h-16 rounded-full bg-purple-50 flex items-center justify-center mb-6">
+                    <Mail className="w-8 h-8 text-purple-600" />
                 </div>
 
                 {status === 'verification-link-sent' && (
@@ -33,7 +33,7 @@ export default function VerifyEmail({ status }: { status?: string }) {
                         <>
                             <Button
                                 disabled={processing}
-                                className="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-200 transition-all"
+                                className="w-full h-12 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl shadow-lg shadow-purple-200 transition-all"
                             >
                                 {processing && <Spinner />}
                                 Resend verification email

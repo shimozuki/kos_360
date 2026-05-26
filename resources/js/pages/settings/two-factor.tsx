@@ -105,7 +105,7 @@ export default function TwoFactor({
                                 {hasSetupData ? (
                                     <Button
                                         onClick={() => setShowSetupModal(true)}
-                                        className="h-11 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-200 transition-all"
+                                        className="h-11 px-6 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl shadow-lg shadow-purple-200 transition-all"
                                     >
                                         <ShieldCheck className="mr-2" size={18} />
                                         Continue Setup
@@ -119,7 +119,7 @@ export default function TwoFactor({
                                             <Button
                                                 type="submit"
                                                 disabled={processing}
-                                                className="h-11 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-200 transition-all"
+                                                className="h-11 px-6 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl shadow-lg shadow-purple-200 transition-all"
                                             >
                                                 <ShieldCheck className="mr-2" size={18} />
                                                 Enable 2FA

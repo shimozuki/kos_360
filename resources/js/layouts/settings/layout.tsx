@@ -55,7 +55,7 @@ export default function SettingsLayout({ children }: PropsWithChildren) {
                                         className={cn(
                                             'flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 font-medium',
                                             isActive
-                                                ? 'bg-blue-600 text-white shadow-lg shadow-blue-200'
+                                                ? 'bg-purple-600 text-white shadow-lg shadow-purple-200'
                                                 : 'text-gray-500 hover:bg-gray-50 hover:text-gray-900'
                                         )}
                                     >

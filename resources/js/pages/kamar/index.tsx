@@ -106,7 +106,7 @@ export default function KamarIndex({ kamers }: Props) {
 
                     <Link
                         href="/kamar/create"
-                        className="rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700">
+                        className="rounded-xl bg-purple-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-purple-700">
                         Tambah Kamar
                     </Link>
 
@@ -224,7 +224,7 @@ export default function KamarIndex({ kamers }: Props) {
                             }}
                             className={`rounded-lg px-4 py-2 text-sm transition ${
                                 link.active
-                                    ? 'bg-blue-600 text-white'
+                                    ? 'bg-purple-600 text-white'
                                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                             }`}
                         />

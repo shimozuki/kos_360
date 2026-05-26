@@ -41,7 +41,7 @@ export default function BookingIndex({
                     {/* HEADER */}
                     <div className="mb-12">
 
-                        <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-600">
+                        <span className="rounded-full bg-purple-100 px-4 py-2 text-sm font-semibold text-purple-600">
                             Penyewaan Kamar
                         </span>
 
@@ -70,7 +70,7 @@ export default function BookingIndex({
 
                             <Link
                                 href="/#kamar"
-                                className="mt-8 inline-flex rounded-2xl bg-blue-600 px-8 py-4 font-semibold text-white transition hover:bg-blue-700"
+                                className="mt-8 inline-flex rounded-2xl bg-purple-600 px-8 py-4 font-semibold text-white transition hover:bg-purple-700"
                             >
                                 Cari Kamar
                             </Link>
@@ -185,7 +185,7 @@ export default function BookingIndex({
                                                     Total Harga
                                                 </p>
 
-                                                <h3 className="mt-2 text-4xl font-extrabold text-blue-600">
+                                                <h3 className="mt-2 text-4xl font-extrabold text-purple-600">
 
                                                     Rp
                                                     {(
@@ -243,9 +243,9 @@ export default function BookingIndex({
 
                         ${
                             link.active
-                                ? 'bg-blue-600 text-white shadow-xl shadow-blue-200 scale-105'
+                                ? 'bg-purple-600 text-white shadow-xl shadow-purple-200 scale-105'
 
-                                : 'bg-white text-gray-700 shadow-md shadow-gray-200 hover:-translate-y-1 hover:bg-blue-50 hover:text-blue-600 hover:shadow-lg'
+                                : 'bg-white text-gray-700 shadow-md shadow-gray-200 hover:-translate-y-1 hover:bg-purple-50 hover:text-purple-600 hover:shadow-lg'
                         }
 
                         ${

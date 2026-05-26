@@ -104,7 +104,7 @@ export default function Dashboard({ users }: Props) {
                     </div>
 
                     {/* <div className="w-full sm:w-auto">
-                        <button className="flex w-full items-center justify-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-blue-200 transition-colors hover:bg-blue-700 sm:w-auto">
+                        <button className="flex w-full items-center justify-center gap-2 rounded-full bg-purple-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-purple-200 transition-colors hover:bg-purple-700 sm:w-auto">
                             <span>Add New</span>
                             <Plus size={18} strokeWidth={3} />
                         </button>
@@ -127,7 +127,7 @@ export default function Dashboard({ users }: Props) {
                         >
                             {/* User Info */}
                             <div className="flex w-full items-center gap-4 lg:w-[40%]">
-                                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-blue-100 text-blue-600">
+                                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-purple-100 text-purple-600">
                                     <UserIcon size={24} />
                                 </div>
 
@@ -190,7 +190,7 @@ export default function Dashboard({ users }: Props) {
                             }}
                             className={`rounded-lg px-4 py-2 text-sm transition ${
                                 link.active
-                                    ? 'bg-blue-600 text-white'
+                                    ? 'bg-purple-600 text-white'
                                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                             }`}
                         />

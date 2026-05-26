@@ -39,7 +39,7 @@ export default function TwoFactorChallenge() {
             description:
                 'Enter the 6-digit code from your authenticator app to continue.',
             toggleText: 'Use recovery code instead',
-            icon: <Smartphone className="w-8 h-8 text-blue-600" />,
+            icon: <Smartphone className="w-8 h-8 text-purple-600" />,
         };
     }, [showRecoveryInput]);
 
@@ -58,7 +58,7 @@ export default function TwoFactorChallenge() {
 
             <div className="flex flex-col items-center">
                 {/* Icon */}
-                <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-6 ${showRecoveryInput ? 'bg-amber-50' : 'bg-blue-50'}`}>
+                <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-6 ${showRecoveryInput ? 'bg-amber-50' : 'bg-purple-50'}`}>
                     {authConfigContent.icon}
                 </div>
 
@@ -78,7 +78,7 @@ export default function TwoFactorChallenge() {
                                         placeholder="Enter recovery code"
                                         autoFocus={showRecoveryInput}
                                         required
-                                        className="h-12 px-4 rounded-xl border-gray-200 bg-[#F4F6F9] focus:bg-white focus:border-blue-500 focus:ring-blue-500 transition-all text-center font-mono"
+                                        className="h-12 px-4 rounded-xl border-gray-200 bg-[#F4F6F9] focus:bg-white focus:border-purple-500 focus:ring-purple-500 transition-all text-center font-mono"
                                     />
                                     <InputError
                                         message={errors.recovery_code}
@@ -115,7 +115,7 @@ export default function TwoFactorChallenge() {
 
                             <Button
                                 type="submit"
-                                className="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-200 transition-all"
+                                className="w-full h-12 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl shadow-lg shadow-purple-200 transition-all"
                                 disabled={processing}
                             >
                                 Verify
@@ -124,7 +124,7 @@ export default function TwoFactorChallenge() {
                             <div className="text-center text-sm text-gray-500 pt-2">
                                 <button
                                     type="button"
-                                    className="text-blue-600 font-medium hover:text-blue-700 transition-colors"
+                                    className="text-purple-600 font-medium hover:text-purple-700 transition-colors"
                                     onClick={() =>
                                         toggleRecoveryMode(clearErrors)
                                     }

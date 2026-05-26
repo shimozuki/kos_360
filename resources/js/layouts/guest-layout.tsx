@@ -22,7 +22,7 @@ export default function GuestLayout({ children }: Props) {
                         <Link href="/">
 
                             <h1 className="text-2xl font-black tracking-tight text-gray-900">
-                                Kos<span className="text-blue-600">360</span>
+                                Kos<span className="text-purple-600">360</span>
                             </h1>
 
                         </Link>
@@ -33,28 +33,28 @@ export default function GuestLayout({ children }: Props) {
 
                         <a
                             href="/#home"
-                            className="text-sm font-medium text-gray-600 transition hover:text-blue-600"
+                            className="text-sm font-medium text-gray-600 transition hover:text-purple-600"
                         >
                             Home
                         </a>
 
                         <a
                             href="/#kamar"
-                            className="text-sm font-medium text-gray-600 transition hover:text-blue-600"
+                            className="text-sm font-medium text-gray-600 transition hover:text-purple-600"
                         >
                             Kamar
                         </a>
 
                         <a
                             href="/#fasilitas"
-                            className="text-sm font-medium text-gray-600 transition hover:text-blue-600"
+                            className="text-sm font-medium text-gray-600 transition hover:text-purple-600"
                         >
                             Fasilitas
                         </a>
 
                         <a
                             href="/#virtual"
-                            className="text-sm font-medium text-gray-600 transition hover:text-blue-600"
+                            className="text-sm font-medium text-gray-600 transition hover:text-purple-600"
                         >
                             Virtual 360
                         </a>
@@ -69,7 +69,7 @@ export default function GuestLayout({ children }: Props) {
 
                             <Link
                                 href="/my-booking"
-                                className="rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:bg-blue-700"
+                                className="rounded-xl bg-purple-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-purple-500/20 transition hover:bg-purple-700"
                             >
                                 My Booking
                             </Link>
@@ -98,7 +98,7 @@ export default function GuestLayout({ children }: Props) {
 
                             <Link
                                 href="/register"
-                                className="rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:bg-blue-700"
+                                className="rounded-xl bg-purple-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-purple-500/20 transition hover:bg-purple-700"
                             >
                                 Register
                             </Link>

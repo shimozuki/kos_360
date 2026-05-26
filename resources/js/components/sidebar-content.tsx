@@ -31,7 +31,7 @@ const NavItem: React.FC<NavItemProps> = ({
 }) => {
     const content = (
         <span
-            className={`flex w-full items-center gap-3 rounded-xl py-3 transition-all duration-200 ${active ? 'bg-blue-600 text-white shadow-lg shadow-blue-200' : 'text-gray-500 hover:bg-gray-50 hover:text-gray-900'} ${isCollapsed ? 'justify-center px-2' : 'px-4'}`}
+            className={`flex w-full items-center gap-3 rounded-xl py-3 transition-all duration-200 ${active ? 'bg-purple-600 text-white shadow-lg shadow-blue-200' : 'text-gray-500 hover:bg-gray-50 hover:text-gray-900'} ${isCollapsed ? 'justify-center px-2' : 'px-4'}`}
         >
             {icon}
             {!isCollapsed && <span className="font-medium">{label}</span>}

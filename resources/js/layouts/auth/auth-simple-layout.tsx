@@ -17,7 +17,7 @@ export default function AuthSimpleLayout({
     return (
         <div className="min-h-screen w-full bg-white lg:grid lg:grid-cols-2">
             {/* Left Panel - Branding & Visuals (Hidden on Mobile) */}
-            <div className="relative hidden flex-col justify-between overflow-hidden bg-gradient-to-br from-blue-600 to-indigo-700 p-12 text-white lg:flex">
+            <div className="relative hidden flex-col justify-between overflow-hidden bg-gradient-to-br from-purple-600 to-fuchsia-700 p-12 text-white lg:flex">
                 {/* Abstract Patterns */}
                 <div className="absolute top-0 left-0 h-full w-full opacity-10">
                     <div className="absolute top-20 left-20 h-72 w-72 rounded-full bg-white blur-3xl"></div>
@@ -64,7 +64,7 @@ export default function AuthSimpleLayout({
                                 Kos360 Management
                             </p>
 
-                            <p className="text-sm text-blue-100">
+                            <p className="text-sm text-purple-100">
                                 Smart Boarding House Platform
                             </p>
 
@@ -75,7 +75,7 @@ export default function AuthSimpleLayout({
                 </div>
 
                 {/* Footer Links */}
-                <div className="relative z-10 flex gap-6 text-sm text-blue-100">
+                <div className="relative z-10 flex gap-6 text-sm text-purple-100">
                     <a href="#" className="transition-colors hover:text-white">
                         Privacy Policy
                     </a>

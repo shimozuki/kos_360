@@ -68,7 +68,7 @@ export default function Password() {
                                             type="password"
                                             autoComplete="current-password"
                                             placeholder="••••••••"
-                                            className="h-12 px-4 rounded-xl border-gray-200 bg-[#F4F6F9] focus:bg-white focus:border-blue-500 focus:ring-blue-500 transition-all"
+                                            className="h-12 px-4 rounded-xl border-gray-200 bg-[#F4F6F9] focus:bg-white focus:border-purple-500 focus:ring-purple-500 transition-all"
                                         />
                                         <InputError message={errors.current_password} />
                                     </div>
@@ -84,7 +84,7 @@ export default function Password() {
                                             type="password"
                                             autoComplete="new-password"
                                             placeholder="••••••••"
-                                            className="h-12 px-4 rounded-xl border-gray-200 bg-[#F4F6F9] focus:bg-white focus:border-blue-500 focus:ring-blue-500 transition-all"
+                                            className="h-12 px-4 rounded-xl border-gray-200 bg-[#F4F6F9] focus:bg-white focus:border-purple-500 focus:ring-purple-500 transition-all"
                                         />
                                         <InputError message={errors.password} />
                                     </div>
@@ -99,7 +99,7 @@ export default function Password() {
                                             type="password"
                                             autoComplete="new-password"
                                             placeholder="••••••••"
-                                            className="h-12 px-4 rounded-xl border-gray-200 bg-[#F4F6F9] focus:bg-white focus:border-blue-500 focus:ring-blue-500 transition-all"
+                                            className="h-12 px-4 rounded-xl border-gray-200 bg-[#F4F6F9] focus:bg-white focus:border-purple-500 focus:ring-purple-500 transition-all"
                                         />
                                         <InputError message={errors.password_confirmation} />
                                     </div>
@@ -108,7 +108,7 @@ export default function Password() {
                                         <Button
                                             disabled={processing}
                                             data-test="update-password-button"
-                                            className="h-11 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-200 transition-all"
+                                            className="h-11 px-6 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl shadow-lg shadow-purple-200 transition-all"
                                         >
                                             Save password
                                         </Button>

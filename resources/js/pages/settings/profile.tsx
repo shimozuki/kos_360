@@ -60,7 +60,7 @@ export default function Profile({
                                             required
                                             autoComplete="name"
                                             placeholder="Full name"
-                                            className="h-12 px-4 rounded-xl border-gray-200 bg-[#F4F6F9] focus:bg-white focus:border-blue-500 focus:ring-blue-500 transition-all"
+                                            className="h-12 px-4 rounded-xl border-gray-200 bg-[#F4F6F9] focus:bg-white focus:border-purple-500 focus:ring-purple-500 transition-all"
                                         />
                                         <InputError message={errors.name} />
                                     </div>
@@ -77,7 +77,7 @@ export default function Profile({
                                             required
                                             autoComplete="username"
                                             placeholder="Email address"
-                                            className="h-12 px-4 rounded-xl border-gray-200 bg-[#F4F6F9] focus:bg-white focus:border-blue-500 focus:ring-blue-500 transition-all"
+                                            className="h-12 px-4 rounded-xl border-gray-200 bg-[#F4F6F9] focus:bg-white focus:border-purple-500 focus:ring-purple-500 transition-all"
                                         />
                                         <InputError message={errors.email} />
                                     </div>
@@ -108,7 +108,7 @@ export default function Profile({
                                         <Button
                                             disabled={processing}
                                             data-test="update-profile-button"
-                                            className="h-11 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-200 transition-all"
+                                            className="h-11 px-6 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl shadow-lg shadow-purple-200 transition-all"
                                         >
                                             Save changes
                                         </Button>

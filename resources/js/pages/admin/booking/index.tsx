@@ -223,7 +223,7 @@ export default function Index({
                         }}
                         className={`rounded-lg px-4 py-2 text-sm ${
                             link.active
-                                ? 'bg-blue-600 text-white'
+                                ? 'bg-purple-600 text-white'
                                 : 'bg-gray-100 text-gray-700'
                         }`}
                         dangerouslySetInnerHTML={{

@@ -35,20 +35,20 @@ export default function Welcome({ kamers }: Props) {
                     id="home"
                     className="relative overflow-hidden px-6 py-20 lg:px-8 lg:py-28"
                 >
-                    <div className="absolute top-0 left-0 h-72 w-72 rounded-full bg-blue-200/40 blur-3xl"></div>
+                    <div className="absolute top-0 left-0 h-72 w-72 rounded-full bg-purple-200/40 blur-3xl"></div>
 
                     <div className="absolute right-0 bottom-0 h-72 w-72 rounded-full bg-indigo-200/40 blur-3xl"></div>
 
                     <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2">
                         <div>
-                            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
+                            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-purple-100 px-4 py-2 text-sm font-medium text-purple-700">
                                 <Camera size={16} />
                                 Virtual Room 360 Experience
                             </div>
 
                             <h1 className="text-5xl leading-tight font-black tracking-tight text-gray-900 lg:text-6xl">
                                 Cari Kost Modern Dengan
-                                <span className="text-blue-600">
+                                <span className="text-purple-600">
                                     {' '}
                                     Virtual Tour 360°
                                 </span>
@@ -63,7 +63,7 @@ export default function Welcome({ kamers }: Props) {
                             <div className="mt-10 flex flex-wrap items-center gap-4">
                                 <a
                                     href="#kamar"
-                                    className="flex items-center gap-2 rounded-2xl bg-blue-600 px-7 py-4 text-sm font-bold text-white shadow-xl shadow-blue-200 transition hover:bg-blue-700"
+                                    className="flex items-center gap-2 rounded-2xl bg-purple-600 px-7 py-4 text-sm font-bold text-white shadow-xl shadow-purple-200 transition hover:bg-purple-700"
                                 >
                                     Lihat Kamar
                                     <ArrowRight size={18} />
@@ -80,7 +80,7 @@ export default function Welcome({ kamers }: Props) {
                         </div>
 
                         <div className="relative">
-                            <div className="absolute -top-10 -left-10 h-40 w-40 rounded-full bg-blue-300/30 blur-3xl"></div>
+                            <div className="absolute -top-10 -left-10 h-40 w-40 rounded-full bg-purple-300/30 blur-3xl"></div>
 
                             <img
                                 src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1400&auto=format&fit=crop"
@@ -99,7 +99,7 @@ export default function Welcome({ kamers }: Props) {
                     <div className="mx-auto max-w-7xl">
                         <div className="mb-12 flex items-end justify-between">
                             <div>
-                                <p className="text-sm font-bold tracking-widest text-blue-600 uppercase">
+                                <p className="text-sm font-bold tracking-widest text-purple-600 uppercase">
                                     Data Kamar
                                 </p>
 
@@ -122,7 +122,7 @@ export default function Welcome({ kamers }: Props) {
                                             className="h-72 w-full object-cover transition duration-500 group-hover:scale-105"
                                         />
 
-                                        <div className="absolute top-5 right-5 rounded-full bg-white/90 px-4 py-2 text-xs font-bold text-blue-600 backdrop-blur-lg">
+                                        <div className="absolute top-5 right-5 rounded-full bg-white/90 px-4 py-2 text-xs font-bold text-purple-600 backdrop-blur-lg">
                                             {kamar.status}
                                         </div>
                                     </div>
@@ -151,7 +151,7 @@ export default function Welcome({ kamers }: Props) {
                                                     Harga Mulai
                                                 </p>
 
-                                                <h4 className="text-2xl font-black text-blue-600">
+                                                <h4 className="text-2xl font-black text-purple-600">
                                                     Rp{' '}
                                                     {kamar.harga.toLocaleString()}
                                                 </h4>
@@ -178,7 +178,7 @@ export default function Welcome({ kamers }: Props) {
                 >
                     <div className="mx-auto max-w-7xl rounded-[36px] bg-white p-10 shadow-sm lg:p-14">
                         <div className="mb-12 text-center">
-                            <p className="text-sm font-bold tracking-widest text-blue-600 uppercase">
+                            <p className="text-sm font-bold tracking-widest text-purple-600 uppercase">
                                 Fasilitas
                             </p>
 
@@ -189,7 +189,7 @@ export default function Welcome({ kamers }: Props) {
 
                         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
                             <div className="rounded-3xl bg-[#F7F9FC] p-8 text-center">
-                                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-100 text-blue-600">
+                                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-purple-100 text-purple-600">
                                     <Wifi size={28} />
                                 </div>
 
@@ -252,10 +252,10 @@ export default function Welcome({ kamers }: Props) {
                     id="virtual"
                     className="px-6 py-20 lg:px-8"
                 >
-                    <div className="mx-auto max-w-7xl overflow-hidden rounded-[36px] bg-gradient-to-br from-blue-600 to-indigo-700 p-10 text-white shadow-2xl lg:p-16">
+                    <div className="mx-auto max-w-7xl overflow-hidden rounded-[36px] bg-gradient-to-br from-purple-600 to-indigo-700 p-10 text-white shadow-2xl lg:p-16">
                         <div className="grid items-center gap-10 lg:grid-cols-2">
                             <div>
-                                <p className="text-sm font-bold tracking-widest text-blue-100 uppercase">
+                                <p className="text-sm font-bold tracking-widest text-purple-100 uppercase">
                                     Virtual Tour
                                 </p>
 
@@ -263,12 +263,12 @@ export default function Welcome({ kamers }: Props) {
                                     Jelajahi Kamar Dengan Pengalaman 360°
                                 </h2>
 
-                                <p className="mt-6 max-w-xl text-lg leading-relaxed text-blue-100">
+                                <p className="mt-6 max-w-xl text-lg leading-relaxed text-purple-100">
                                     Rasakan pengalaman melihat kamar secara interaktif
                                     melalui teknologi virtual panorama 360 derajat.
                                 </p>
 
-                                <button className="mt-10 rounded-2xl bg-white px-7 py-4 text-sm font-bold text-blue-700 transition hover:bg-blue-50">
+                                <button className="mt-10 rounded-2xl bg-white px-7 py-4 text-sm font-bold text-purple-700 transition hover:bg-purple-50">
                                     Mulai Virtual Tour
                                 </button>
                             </div>

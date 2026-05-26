@@ -129,7 +129,7 @@ export default function ShowKamar({ kamar, user }: Props) {
                                             `/storage/${kamar.thumbnail}`
                                         )
                                     }
-                                    className="overflow-hidden rounded-2xl border-2 border-blue-500"
+                                    className="overflow-hidden rounded-2xl border-2 border-purple-500"
                                 >
                                     <img
                                         src={`/storage/${kamar.thumbnail}`}
@@ -146,7 +146,7 @@ export default function ShowKamar({ kamar, user }: Props) {
                                                 `/storage/${image.file}`
                                             )
                                         }
-                                        className="overflow-hidden rounded-2xl border border-gray-200 transition hover:border-blue-500"
+                                        className="overflow-hidden rounded-2xl border border-gray-200 transition hover:border-purple-500"
                                     >
                                         <img
                                             src={`/storage/${image.file}`}
@@ -186,7 +186,7 @@ export default function ShowKamar({ kamar, user }: Props) {
                                                     e.target.value
                                                 )
                                             }
-                                            className="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none focus:border-blue-500"
+                                            className="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none focus:border-purple-500"
                                         />
 
                                     </div>
@@ -208,7 +208,7 @@ export default function ShowKamar({ kamar, user }: Props) {
                                                     Number(e.target.value)
                                                 )
                                             }
-                                            className="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none focus:border-blue-500"
+                                            className="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none focus:border-purple-500"
                                         />
 
                                     </div>
@@ -229,7 +229,7 @@ export default function ShowKamar({ kamar, user }: Props) {
                                                     e.target.value
                                                 )
                                             }
-                                            className="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none focus:border-blue-500"
+                                            className="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none focus:border-purple-500"
                                             placeholder="Contoh: saya mahasiswa semester 5..."
                                         />
 
@@ -240,7 +240,7 @@ export default function ShowKamar({ kamar, user }: Props) {
 
         <button
             disabled={processing}
-            className="rounded-2xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700 disabled:opacity-50"
+            className="rounded-2xl bg-purple-600 px-6 py-3 font-semibold text-white transition hover:bg-purple-700 disabled:opacity-50"
         >
 
             {
@@ -255,7 +255,7 @@ export default function ShowKamar({ kamar, user }: Props) {
 
         <Link
             href="/login"
-            className="inline-flex rounded-2xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
+            className="inline-flex rounded-2xl bg-purple-600 px-6 py-3 font-semibold text-white transition hover:bg-purple-700"
         >
 
             Login Untuk Booking
@@ -276,7 +276,7 @@ export default function ShowKamar({ kamar, user }: Props) {
 
                             <div>
 
-                                <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
+                                <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-purple-100 px-4 py-2 text-sm font-semibold text-purple-700">
                                     <BedDouble size={16} />
                                     {kamar.status}
                                 </div>
@@ -296,7 +296,7 @@ export default function ShowKamar({ kamar, user }: Props) {
                                         Harga Sewa
                                     </p>
 
-                                    <h2 className="mt-2 text-4xl font-black text-blue-600">
+                                    <h2 className="mt-2 text-4xl font-black text-purple-600">
                                         Rp {kamar.harga.toLocaleString()}
                                     </h2>
 
@@ -320,7 +320,7 @@ export default function ShowKamar({ kamar, user }: Props) {
                                         className={`relative flex items-center gap-3 rounded-2xl p-4 transition
                                         ${
                                             kamar.wifi
-                                                ? 'bg-blue-50 text-blue-600'
+                                                ? 'bg-purple-50 text-purple-600'
                                                 : 'bg-gray-100 text-gray-400'
                                         }`}
                                     >
@@ -577,7 +577,7 @@ export default function ShowKamar({ kamar, user }: Props) {
 
                         <div className="mb-8">
 
-                            <p className="text-sm font-bold tracking-widest text-blue-600 uppercase">
+                            <p className="text-sm font-bold tracking-widest text-purple-600 uppercase">
                                 Video Tour
                             </p>
 

@@ -40,7 +40,7 @@ export default function ForgotPassword({ status }: { status?: string }) {
                                     autoComplete="off"
                                     autoFocus
                                     placeholder="email@example.com"
-                                    className="h-12 px-4 rounded-xl border-gray-200 bg-[#F4F6F9] focus:bg-white focus:border-blue-500 focus:ring-blue-500 transition-all"
+                                    className="h-12 px-4 rounded-xl border-gray-200 bg-[#F4F6F9] focus:bg-white focus:border-purple-500 focus:ring-purple-500 transition-all"
                                 />
 
                                 <InputError message={errors.email} />
@@ -48,7 +48,7 @@ export default function ForgotPassword({ status }: { status?: string }) {
 
                             <div className="mt-6">
                                 <Button
-                                    className="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-200 transition-all"
+                                    className="w-full h-12 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl shadow-lg shadow-purple-200 transition-all"
                                     disabled={processing}
                                     data-test="email-password-reset-link-button"
                                 >

@@ -146,7 +146,7 @@ export default function Edit({
                                     e.target.value
                                 )
                             }
-                            className="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none focus:border-blue-500"
+                            className="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none focus:border-purple-500"
                         />
 
                     </div>
@@ -167,7 +167,7 @@ export default function Edit({
                                     e.target.value
                                 )
                             }
-                            className="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none focus:border-blue-500"
+                            className="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none focus:border-purple-500"
                         />
 
                     </div> */}
@@ -188,7 +188,7 @@ export default function Edit({
                                     Number(e.target.value)
                                 )
                             }
-                            className="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none focus:border-blue-500"
+                            className="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none focus:border-purple-500"
                         />
 
                     </div>
@@ -208,7 +208,7 @@ export default function Edit({
                                     e.target.value
                                 )
                             }
-                            className="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none focus:border-blue-500"
+                            className="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none focus:border-purple-500"
                         >
 
                             <option value="tersedia">
@@ -243,7 +243,7 @@ export default function Edit({
                                     e.target.value
                                 )
                             }
-                            className="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none focus:border-blue-500"
+                            className="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none focus:border-purple-500"
                         />
 
                     </div>
@@ -492,7 +492,7 @@ export default function Edit({
                                     e.target.value
                                 )
                             }
-                            className="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none focus:border-blue-500"
+                            className="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none focus:border-purple-500"
                         />
 
                     </div>
@@ -500,7 +500,7 @@ export default function Edit({
                     {/* submit */}
                     <button
                         disabled={processing}
-                        className="rounded-2xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
+                        className="rounded-2xl bg-purple-600 px-6 py-3 font-semibold text-white transition hover:bg-purple-700 disabled:cursor-not-allowed disabled:opacity-50"
                     >
 
                         {

@@ -56,7 +56,7 @@ export default function Login({
                                     tabIndex={1}
                                     autoComplete="email"
                                     placeholder="email@example.com"
-                                    className="h-12 px-4 rounded-xl border-gray-200 bg-[#F4F6F9] focus:bg-white focus:border-blue-500 focus:ring-blue-500 transition-all"
+                                    className="h-12 px-4 rounded-xl border-gray-200 bg-[#F4F6F9] focus:bg-white focus:border-purple-500 focus:ring-purple-500 transition-all"
                                 />
                                 <InputError message={errors.email} />
                             </div>
@@ -69,7 +69,7 @@ export default function Login({
                                     {canResetPassword && (
                                         <TextLink
                                             href={request()}
-                                            className="text-sm text-blue-600 hover:text-blue-700"
+                                            className="text-sm text-purple-600 hover:text-purple-700"
                                             tabIndex={5}
                                         >
                                             Forgot password?
@@ -84,7 +84,7 @@ export default function Login({
                                     tabIndex={2}
                                     autoComplete="current-password"
                                     placeholder="••••••••"
-                                    className="h-12 px-4 rounded-xl border-gray-200 bg-[#F4F6F9] focus:bg-white focus:border-blue-500 focus:ring-blue-500 transition-all"
+                                    className="h-12 px-4 rounded-xl border-gray-200 bg-[#F4F6F9] focus:bg-white focus:border-purple-500 focus:ring-purple-500 transition-all"
                                 />
                                 <InputError message={errors.password} />
                             </div>
@@ -103,7 +103,7 @@ export default function Login({
 
                             <Button
                                 type="submit"
-                                className="mt-2 w-full h-12 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-200 transition-all"
+                                className="mt-2 w-full h-12 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl shadow-lg shadow-purple-200 transition-all"
                                 tabIndex={4}
                                 disabled={processing}
                                 data-test="login-button"
@@ -119,7 +119,7 @@ export default function Login({
                                 <TextLink
                                     href={register()}
                                     tabIndex={5}
-                                    className="text-blue-600 font-semibold hover:text-blue-700"
+                                    className="text-purple-600 font-semibold hover:text-purple-700"
                                 >
                                     Create account
                                 </TextLink>

@@ -66,7 +66,7 @@ export default function CreateKamar() {
                             onChange={(e) =>
                                 setData('kode_kamar', e.target.value)
                             }
-                            className="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none focus:border-blue-500"
+                            className="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none focus:border-purple-500"
                         />
 
                     </div>
@@ -84,7 +84,7 @@ export default function CreateKamar() {
                             onChange={(e) =>
                                 setData('nama_kamar', e.target.value)
                             }
-                            className="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none focus:border-blue-500"
+                            className="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none focus:border-purple-500"
                         />
 
                     </div> */}
@@ -102,7 +102,7 @@ export default function CreateKamar() {
                             onChange={(e) =>
                                 setData('harga', e.target.value)
                             }
-                            className="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none focus:border-blue-500"
+                            className="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none focus:border-purple-500"
                         />
 
                     </div>
@@ -119,7 +119,7 @@ export default function CreateKamar() {
                             onChange={(e) =>
                                 setData('deskripsi', e.target.value)
                             }
-                            className="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none focus:border-blue-500"
+                            className="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none focus:border-purple-500"
                         />
 
                     </div>
@@ -287,7 +287,7 @@ export default function CreateKamar() {
             )
         }
         rows={4}
-        className="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none focus:border-blue-500"
+        className="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none focus:border-purple-500"
         placeholder="Contoh: Smart TV, dispenser, balkon pribadi..."
     />
 
@@ -295,7 +295,7 @@ export default function CreateKamar() {
                     <button
                         type="submit"
                         disabled={processing}
-                        className="rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
+                        className="rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white transition hover:bg-purple-700"
                     >
                         Simpan Kamar
                     </button>
